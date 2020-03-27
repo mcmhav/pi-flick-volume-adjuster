@@ -1,0 +1,14 @@
+[Unit]
+Description=Windows volume service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python main.py
+WorkingDirectory=/home/pi/flick/pi-flick-volume-adjuster
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
